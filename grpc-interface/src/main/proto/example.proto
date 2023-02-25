@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package ru.vichukano.proto;
+
+option java_package = "ru.vichukano.proto";
+option java_outer_classname = "ProtoExample";
+
+// The greeting service definition.
+service MyService {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {
+  }
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+  int32 first = 2;
+  int64 second = 3;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
